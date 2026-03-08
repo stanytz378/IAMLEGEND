@@ -10,8 +10,8 @@ RUN apt-get update && \
     webp && \
     rm -rf /var/lib/apt/lists/*
 
-# Install PM2 globally
-RUN npm install -g pm2
+# Install concurrently globally (to run both web server and bot)
+RUN npm install -g concurrently
 
 # Copy package files
 COPY package*.json ./
@@ -24,5 +24,5 @@ COPY . .
 
 EXPOSE 3000
 
-# Start both processes with PM2
-CMD ["pm2-runtime", "start", "ecosystem.config.js"]
+# Run both web server and bot together
+CMD ["concurrently", "node web-server.js", "node index.js"]
