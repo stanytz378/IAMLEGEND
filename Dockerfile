@@ -1,26 +1,29 @@
 FROM node:lts-bookworm
 
+# Install tzdata and set timezone to Africa/Dodoma
+RUN apt-get update && apt-get install -y tzdata && \
+    ln -fs /usr/share/zoneinfo/Africa/Dodoma /etc/localtime && \
+    dpkg-reconfigure --frontend noninteractive tzdata && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
+
+# Set environment variable (optional, but good practice)
+ENV TZ=Africa/Dodoma
+
 WORKDIR /app
 
-# Install system dependencies including tzdata
+# Install other system dependencies
 RUN apt-get update && \
     apt-get install -y \
     ffmpeg \
     imagemagick \
-    webp \
-    tzdata && \
+    webp && \
     rm -rf /var/lib/apt/lists/*
 
-# Set timezone environment variable
-ENV TZ=Africa/Dodoma
-
-# Install concurrently globally
+# Install concurrently to run both web server and bot
 RUN npm install -g concurrently
 
-# Copy package files
+# Copy package files and install dependencies
 COPY package*.json ./
-
-# Install dependencies
 RUN npm install
 
 # Copy the rest of the app
