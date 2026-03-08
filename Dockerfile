@@ -22,8 +22,8 @@ RUN npm install
 # Copy the rest of the app
 COPY . .
 
-# Expose port (Render inatarajia hii)
+# Expose the port Render will use
 EXPOSE 3000
 
-# Start both the web server and the bot using PM2
+# Start both processes using PM2
 CMD ["pm2-runtime", "start", "ecosystem.config.js"]
