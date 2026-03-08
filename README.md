@@ -235,7 +235,7 @@ STANYTZ,RED TECH,JOKER,AHMAD OLALE
 
 ## Copyright Notice
 
-Copyright (c) 2026 GlobalTechInfo. All rights reserved.
+Copyright (c) 2026 StanyTz🇹🇿. All rights reserved.
 
 This project contains code from various open source projects:
 - Baileys (MIT License)
