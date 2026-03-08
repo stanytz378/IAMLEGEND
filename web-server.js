@@ -4,7 +4,6 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Simple status page
 app.get('/', (req, res) => {
   res.send(`
     <!DOCTYPE html>
@@ -29,7 +28,6 @@ app.get('/', (req, res) => {
   `);
 });
 
-// Health check endpoint for Render
 app.get('/health', (req, res) => {
   res.status(200).send('OK');
 });
