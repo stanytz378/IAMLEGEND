@@ -1,5 +1,8 @@
 FROM node:lts-bookworm
 
+# Set working directory - FIXED RENDER DEPLOYMENT STANYTZ
+WORKDIR /app
+
 # Install system dependencies
 RUN apt-get update && \
   apt-get install -y \
