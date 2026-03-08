@@ -1,6 +1,6 @@
 {
   "name": "iamlegend",
-  "description": " Whatsapp automation",
+  "description": "Whatsapp automation",
   "keywords": [
     "whatsapp Bot"
   ],
@@ -10,7 +10,7 @@
     "SESSION_ID": {
       "description": "Put your session id",
       "required": true,
-      "value": ""
+      "value": "Stanytz378/IAMLEGEND_pxkwNQL1"
     },
     "MONGO_URL": {
       "description": "Put if you have mongodb database url",
@@ -27,12 +27,12 @@
       "required": false,
       "value": ""
     },
-     "PREFIXES=": {
+    "PREFIXES": {
       "description": "One or more prefixes splited by comma",
       "required": false,
       "value": "."
     },
-     "PACKNAME": {
+    "PACKNAME": {
       "description": "Your sticker pack name",
       "required": false,
       "value": "StanyTz"
@@ -67,8 +67,8 @@
       "required": false,
       "value": ""
     }
-    },
-    "buildpacks": [
+  },
+  "buildpacks": [
     {
       "url": "heroku/nodejs"
     },
