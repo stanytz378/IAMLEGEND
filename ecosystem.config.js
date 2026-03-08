@@ -2,7 +2,7 @@ module.exports = {
   apps: [
     {
       name: 'web-server',
-      script: 'web-server.js',   // now CommonJS
+      script: 'web-server.js',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -12,10 +12,14 @@ module.exports = {
     },
     {
       name: 'IAMLEGEND',
-      script: 'index.js',         // main bot (CommonJS)
+      script: 'index.js',
       instances: 1,
       autorestart: true,
-      watch: false
+      watch: false,
+      // Tuma logs zote kwenye stdout (zitaonekana kwenye Render logs)
+      out_file: '/dev/stdout',
+      error_file: '/dev/stderr',
+      log_date_format: 'YYYY-MM-DD HH:mm:ss'
     }
   ]
 };
