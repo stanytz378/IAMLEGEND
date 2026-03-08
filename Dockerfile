@@ -22,8 +22,7 @@ RUN npm install
 # Copy the rest of the app
 COPY . .
 
-# Expose the port Render will use
 EXPOSE 3000
 
-# Start both processes using PM2
+# Start both processes with PM2
 CMD ["pm2-runtime", "start", "ecosystem.config.js"]
