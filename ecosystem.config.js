@@ -2,7 +2,7 @@ module.exports = {
   apps: [
     {
       name: 'web-server',
-      script: 'web-server.js',
+      script: 'web-server.js',   // now CommonJS
       instances: 1,
       autorestart: true,
       watch: false,
@@ -12,7 +12,7 @@ module.exports = {
     },
     {
       name: 'IAMLEGEND',
-      script: 'index.js',
+      script: 'index.js',         // main bot (CommonJS)
       instances: 1,
       autorestart: true,
       watch: false
