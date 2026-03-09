@@ -8,7 +8,7 @@
  *                                                                           *
  *    © 2026 STANY TZ. All rights reserved.                                 *
  *                                                                           *
- *    Description: This file is part of the IAMLEGEND Project.              *
+ *    Description: This file is part of the ᴵ ᴬᴹ ᴸᴱᴳᴱᴺᴰ ⱽ¹.⁰.⁰ Project.     *
  *                 Unauthorized copying or distribution is prohibited.      *
  *                                                                           *
  *****************************************************************************/
@@ -27,7 +27,6 @@ module.exports = {
 
         let targetNumber = null;
 
-        // Extract number from quoted message (vcard or text)
         if (message.message?.extendedTextMessage?.contextInfo?.quotedMessage) {
             const quotedMsg = message.message.extendedTextMessage.contextInfo.quotedMessage;
             const quotedParticipant = message.message.extendedTextMessage.contextInfo.participant;
@@ -56,14 +55,12 @@ module.exports = {
             }
         }
 
-        // Extract number from arguments
         if (!targetNumber && args.length > 0) {
             const input = args.join(' ');
             const cleaned = input.replace(/[^\d+]/g, '');
             targetNumber = cleaned.replace(/^\+/, '');
         }
 
-        // Validate input
         if (!targetNumber) {
             return await sock.sendMessage(chatId, {
                 text: `❌ *Please provide a number to add!*
@@ -78,7 +75,6 @@ module.exports = {
             }, { quoted: message });
         }
 
-        // Basic country code check
         if (!targetNumber.startsWith('1') && !targetNumber.startsWith('2') && !targetNumber.startsWith('3') && 
             !targetNumber.startsWith('4') && !targetNumber.startsWith('5') && !targetNumber.startsWith('6') && 
             !targetNumber.startsWith('7') && !targetNumber.startsWith('8') && !targetNumber.startsWith('9')) {
@@ -94,7 +90,6 @@ module.exports = {
             const groupMetadata = await sock.groupMetadata(chatId);
             const participants = groupMetadata.participants.map(p => p.id);
             
-            // Check if already in group
             if (participants.includes(targetJid)) {
                 return await sock.sendMessage(chatId, {
                     text: `⚠️ *User is already in the group!*\n\n${targetNumber}`,
@@ -102,14 +97,12 @@ module.exports = {
                 }, { quoted: message });
             }
 
-            // Attempt to add user
             const result = await sock.groupParticipantsUpdate(
                 chatId,
                 [targetJid],
                 'add'
             );
 
-            // Handle response
             if (result[0].status === '200') {
                 await sock.sendMessage(chatId, {
                     text: `✅ *Successfully added!*\n\n@${targetNumber}`,
@@ -142,18 +135,3 @@ module.exports = {
         }
     }
 };
-
-/*****************************************************************************
- *                                                                           *
- *                     Developed By STANY TZ                                 *
- *                                                                           *
- *  🌐  GitHub   : https://github.com/Stanytz378                             *
- *  ▶️  YouTube  : https://youtube.com/@STANYTZ                              *
- *  💬  WhatsApp : https://whatsapp.com/channel/0029Vb7fzu4EwEjmsD4Tzs1p     *
- *                                                                           *
- *    © 2026 STANY TZ. All rights reserved.                                 *
- *                                                                           *
- *    Description: This file is part of the IAMLEGEND Project.              *
- *                 Unauthorized copying or distribution is prohibited.      *
- *                                                                           *
- *****************************************************************************/
