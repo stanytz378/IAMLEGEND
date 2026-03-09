@@ -1,20 +1,15 @@
 FROM node:lts-bookworm
 
+# Install tzdata – ensures timezone support
+RUN apt-get update && apt-get install -y tzdata && \
+    rm -rf /var/lib/apt/lists/*
+
 WORKDIR /app
 
-# Clone IAMLEGEND
+# Clone IAMLEGEND repo
 RUN git clone https://github.com/Stanytz378/IAMLEGEND . && \
     npm install
 
-# Fuck (Express) 
-RUN echo "const express = require('express'); \
-const app = express(); \
-const PORT = process.env.PORT || 3000; \
-app.get('/', (req, res) => res.send('IAMLEGEND Bot - STANY TZ is alive!')); \
-app.get('/health', (req, res) => res.send('OK')); \
-app.listen(PORT, () => console.log('✅ Web server running on port ' + PORT));" > web-server.js
-
 EXPOSE 3000
 
-# Fuck tz tanzania (kumamake)
-CMD ["sh", "-c", "node web-server.js & npm start"]
+CMD ["npm", "start"]
