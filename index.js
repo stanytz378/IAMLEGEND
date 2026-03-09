@@ -8,7 +8,7 @@
  *                                                                           *
  *    © 2026 STANY TZ. All rights reserved.                                 *
  *                                                                           *
- *    Description: Main entry file for IAMLEGEND WhatsApp Bot               *
+ *    Description: Main entry file for ᴵ ᴬᴹ ᴸᴱᴳᴱᴺᴰ ⱽ¹.⁰.⁰ WhatsApp Bot      *
  *                 Unauthorized copying or distribution is prohibited.      *
  *                                                                           *
  *****************************************************************************/
@@ -71,7 +71,6 @@ store.readFromFile();
 setInterval(() => store.writeToFile(), settings.storeWriteInterval || 10000);
 
 commandHandler.loadCommands();
-// console.log(chalk.greenBright(`✅ Loaded ${commandHandler.commands.size} Plugins`));
 
 setInterval(() => {
     if (global.gc) {
@@ -91,7 +90,7 @@ setInterval(() => {
 let phoneNumber = global.PAIRING_NUMBER || process.env.PAIRING_NUMBER || "255787069580";
 let owner = JSON.parse(fs.readFileSync('./data/owner.json'));
 
-global.botname = process.env.BOT_NAME || "IAM•LEGEND";
+global.botname = process.env.BOT_NAME || "ᴵ ᴬᴹ ᴸᴱᴳᴱᴺᴰ ⱽ¹.⁰.⁰";
 global.themeemoji = "•";
 
 const pairingCode = !!phoneNumber || process.argv.includes("--pairing-code");
@@ -258,7 +257,6 @@ async function startBot() {
             keepAliveIntervalMs: 10000,
         });
 
-        // Stealth mode overrides
         const originalSendPresenceUpdate = sock.sendPresenceUpdate;
         const originalReadMessages = sock.readMessages;
         const originalSendReceipt = sock.sendReceipt;
@@ -359,8 +357,8 @@ async function startBot() {
                                 forwardingScore: 1,
                                 isForwarded: true,
                                 forwardedNewsletterMessageInfo: {
-                                    newsletterJid: '120363319098372999@newsletter', // Replace with your newsletter JID if you have
-                                    newsletterName: 'STANY TZ',
+                                    newsletterJid: '120363404317544295@newsletter',
+                                    newsletterName: 'ᴵ ᴬᴹ ᴸᴱᴳᴱᴺᴰ',
                                     serverMessageId: -1
                                 }
                             }
@@ -502,8 +500,8 @@ async function startBot() {
                             forwardingScore: 1,
                             isForwarded: true,
                             forwardedNewsletterMessageInfo: {
-                                newsletterJid: '120363319098372999@newsletter', // Replace with your newsletter JID
-                                newsletterName: 'STANY TZ',
+                                newsletterJid: '120363404317544295@newsletter',
+                                newsletterName: 'ᴵ ᴬᴹ ᴸᴱᴳᴱᴺᴰ',
                                 serverMessageId: -1
                             }
                         }
@@ -518,7 +516,7 @@ async function startBot() {
                 console.log(chalk.magenta(`\n${global.themeemoji || '•'} YT CHANNEL: ${settings.ytch}`));
                 console.log(chalk.magenta(`${global.themeemoji || '•'} GITHUB: Stanytz378`));
                 console.log(chalk.magenta(`${global.themeemoji || '•'} WA NUMBER: ${owner}`));
-                console.log(chalk.magenta(`${global.themeemoji || '•'} CREDIT: ${settings.botOwner}`));
+                console.log(chalk.magenta(`${global.themeemoji || '•'} CREDIT: STANY TZ`));
                 console.log(chalk.green(`${global.themeemoji || '•'} 🤖 Bot Connected Successfully! ✅`));
                 console.log(chalk.blue(`Bot Version: ${settings.version}`));
                 console.log(chalk.cyan(`Loaded Commands: ${commandHandler.commands.size}`));
@@ -582,7 +580,7 @@ async function startBot() {
 
 
 async function main() {
-    printLog('info', 'Starting IAMLEGEND BOT...');
+    printLog('info', 'Starting ᴵ ᴬᴹ ᴸᴱᴳᴱᴺᴰ ⱽ¹.⁰.⁰ BOT...');
     
     const sessionReady = await initializeSession();
     
