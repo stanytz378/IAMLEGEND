@@ -8,7 +8,7 @@
  *                                                                           *
  *    © 2026 STANY TZ. All rights reserved.                                 *
  *                                                                           *
- *    Description: This file is part of the IAMLEGEND Project.              *
+ *    Description: This file is part of the ᴵ ᴬᴹ ᴸᴱᴳᴱᴺᴰ ⱽ¹.⁰.⁰ Project.     *
  *                 Unauthorized copying or distribution is prohibited.      *
  *                                                                           *
  *****************************************************************************/
@@ -46,7 +46,7 @@ module.exports = {
     const commandCount = commandHandler.commands.size;
 
     const text =
-      `🤖 *IAMLEGEND STATUS*\n\n` +
+      `🤖 *ᴵ ᴬᴹ ᴸᴱᴳᴱᴺᴰ STATUS*\n\n` +
       `⏱ Uptime: ${formatUptime(uptimeMs)}\n` +
       `🚀 Started: ${startedAt}\n` +
       `📦 Plugins: ${commandCount}\n` +
@@ -56,18 +56,3 @@ module.exports = {
     await sock.sendMessage(chatId, { text });
   }
 };
-
-/*****************************************************************************
- *                                                                           *
- *                     Developed By STANY TZ                                 *
- *                                                                           *
- *  🌐  GitHub   : https://github.com/Stanytz378                             *
- *  ▶️  YouTube  : https://youtube.com/@STANYTZ                              *
- *  💬  WhatsApp : https://whatsapp.com/channel/0029Vb7fzu4EwEjmsD4Tzs1p     *
- *                                                                           *
- *    © 2026 STANY TZ. All rights reserved.                                 *
- *                                                                           *
- *    Description: This file is part of the IAMLEGEND Project.              *
- *                 Unauthorized copying or distribution is prohibited.      *
- *                                                                           *
- *****************************************************************************/
