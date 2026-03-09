@@ -1,7 +1,13 @@
 {
   "name": "IAMLEGEND",
   "description": "ᴵ ᴬᴹ ᴸᴱᴳᴱᴺᴰ ⱽ¹.⁰.⁰ – Advanced WhatsApp Bot by STANY TZ",
-  "keywords": ["whatsapp-bot", "baileys", "multi-device", "stanytz", "iamlegend"],
+  "keywords": [
+    "whatsapp-bot",
+    "baileys",
+    "multi-device",
+    "stanytz",
+    "iamlegend"
+  ],
   "repository": "https://github.com/Stanytz378/IAMLEGEND",
   "stack": "container",
   "env": {
@@ -26,7 +32,7 @@
       "value": ""
     },
     "PREFIXES": {
-      "description": "Command prefixes (comma separated)",
+      "description": "Command prefixes (comma separated, no spaces)",
       "required": false,
       "value": ".,!,/"
     },
@@ -67,10 +73,18 @@
     }
   },
   "buildpacks": [
-    { "url": "heroku/nodejs" },
-    { "url": "https://github.com/DuckyTeam/heroku-buildpack-imagemagick.git" },
-    { "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest" },
-    { "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git" }
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "https://github.com/DuckyTeam/heroku-buildpack-imagemagick.git"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    },
+    {
+      "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
+    }
   ],
   "formation": {
     "web": {
