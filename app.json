@@ -1,67 +1,67 @@
 {
-  "name": "iamlegend",
-  "description": "Whatsapp automation",
-  "keywords": ["whatsapp Bot"],
+  "name": "IAMLEGEND",
+  "description": "ᴵ ᴬᴹ ᴸᴱᴳᴱᴺᴰ ⱽ¹.⁰.⁰ – Advanced WhatsApp Bot by STANY TZ",
+  "keywords": ["whatsapp-bot", "baileys", "multi-device", "stanytz", "iamlegend"],
   "repository": "https://github.com/Stanytz378/IAMLEGEND",
   "stack": "container",
   "env": {
     "SESSION_ID": {
-      "description": "Put your session id",
+      "description": "Your WhatsApp session ID (get from pairing site)",
       "required": true,
-      "value": "Stanytz378/IAMLEGEND_pxkwNQL1"
+      "value": ""
     },
     "MONGO_URL": {
-      "description": "Put if you have mongodb database url",
+      "description": "MongoDB connection URL (optional)",
       "required": false,
       "value": ""
     },
     "MYSQL_URL": {
-      "description": "Put if you have mysql database url",
+      "description": "MySQL connection URL (optional)",
       "required": false,
       "value": ""
     },
     "POSTGRES_URL": {
-      "description": "Put if you have postgres database url",
+      "description": "PostgreSQL connection URL (optional)",
       "required": false,
       "value": ""
     },
     "PREFIXES": {
-      "description": "One or more prefixes splited by comma",
+      "description": "Command prefixes (comma separated)",
       "required": false,
-      "value": "."
+      "value": ".,!,/"
     },
     "PACKNAME": {
-      "description": "Your sticker pack name",
+      "description": "Sticker pack name",
       "required": false,
-      "value": "StanyTz"
+      "value": "ᴵ ᴬᴹ ᴸᴱᴳᴱᴺᴰ"
     },
     "BOT_NAME": {
-      "description": "Your bot name",
+      "description": "Bot display name",
       "required": false,
-      "value": "IAM•LEGEND"
+      "value": "ᴵ ᴬᴹ ᴸᴱᴳᴱᴺᴰ ⱽ¹.⁰.⁰"
     },
     "OWNER_NUMBER": {
-      "description": "Your WhatsApp number",
+      "description": "Bot owner's WhatsApp number (with country code, no +)",
       "required": false,
       "value": "255787069580"
     },
     "COMMAND_MODE": {
-      "description": "Bot mode",
+      "description": "Bot mode: public/private/groups/inbox/self",
       "required": false,
       "value": "public"
     },
     "BOT_OWNER": {
-      "description": "Owner name",
+      "description": "Owner name (for credits)",
       "required": false,
-      "value": "stanytz"
+      "value": "STANY TZ"
     },
     "TIMEZONE": {
-      "description": "Your time zone",
+      "description": "Your timezone (e.g., Africa/Nairobi)",
       "required": false,
-      "value": "Africa/Dodoma"
+      "value": "Africa/Nairobi"
     },
     "REMOVEBG_KEY": {
-      "description": "Put your Remove background api key",
+      "description": "Remove.bg API key (optional)",
       "required": false,
       "value": ""
     }
