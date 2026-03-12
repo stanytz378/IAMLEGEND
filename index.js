@@ -66,6 +66,12 @@ const {
 const settings = require('./settings');
 const commandHandler = require('./lib/commandHandler');
 
+// ==================== FIXED IMPORTS ====================
+const { isSudo } = require('./lib/isSudo');
+const isOwnerOrSudo = require('./lib/isOwner');
+const isAdmin = require('./lib/isAdmin');
+// =======================================================
+
 store.readFromFile();
 setInterval(() => store.writeToFile(), settings.storeWriteInterval || 10000);
 
@@ -708,5 +714,3 @@ fs.watchFile(file, () => {
     delete require.cache[file];
     require(file);
 });
-
-
